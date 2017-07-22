@@ -55,3 +55,10 @@ BREAKING CHANGE: It's no longer allowed to omit the '-loader' suffix when using 
 npm run build
 ```
 编译后直接用浏览器打开`index.html`。
+
+## 设置开发编环境
+```
+npm i babel-preset-react-hmre webpack-dev-middleware webpack-hot-middleware --save-dev
+npm i express --save-dev
+```
+
