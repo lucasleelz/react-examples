@@ -1,4 +1,8 @@
 /**
+ * webpack-dev-middleware：将webpack与express结合使用。通过该中间件打包后把资源读取到内存中。
+ *  还可以监控代码变动，一旦代码变动，就停止旧代码的资源服务，等到编译完成后继续提供新的资源服务。
+ * webpack-hot-middleware：实现热替换。
+ *
  * Created by lucas lee on 2017/7/22.
  */
 var webpack = require('webpack')

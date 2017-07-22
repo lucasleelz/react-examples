@@ -62,3 +62,18 @@ npm i babel-preset-react-hmre webpack-dev-middleware webpack-hot-middleware --sa
 npm i express --save-dev
 ```
 
+### react-hmre
+- 热替换
+- 错误捕捉
+
+1. 热替换
+    如果没有这个热替换，代码有变化就无法正确的重新载入react模块。
+2. 错误捕捉
+    可以将错误堆栈信息的红色警告页面输出到浏览器.
+    stateless function放在顶层，热替换会错误。也就没有了错误捕捉。
+    
+### 总结
+    使用开发服务器跟热替换需要Babel Webpack Express。
+    Babel在ES2015、React预设的基础上新增react-hmre预设
+    webpack 入口文件、输出配置以及插件使用。
+    Express 则使用中间件。
