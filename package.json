@@ -7,7 +7,7 @@
     "scripts": {
         "start": "node server.js",
         "lint": "eslint src/",
-        "test": "mocha --recursive --compilers js:babel-register"
+        "test": "cross-env NODE_ENV=test mocha --recursive --compilers js:babel-register --require ./test/setup.js"
     },
     "dependencies": {
         "prop-types": "^15.5.10",
@@ -28,6 +28,8 @@
         "babel-preset-react": "^6.24.1",
         "babel-preset-react-hmre": "^1.1.1",
         "babel-register": "^6.24.1",
+        "cross-env": "^5.0.1",
+        "enzyme": "^2.9.1",
         "eslint": "^4.3.0",
         "eslint-config-airbnb": "^15.0.2",
         "eslint-loader": "^1.9.0",
@@ -36,14 +38,17 @@
         "eslint-plugin-react": "^7.1.0",
         "expect": "^1.20.2",
         "express": "^4.15.3",
+        "jsdom": "^11.1.0",
         "mocha": "^3.4.2",
         "pre-commit": "^1.2.2",
+        "react-test-renderer": "^15.6.1",
         "redux-mock-store": "^1.2.3",
         "webpack": "^3.3.0",
         "webpack-dev-middleware": "^1.11.0",
         "webpack-hot-middleware": "^2.18.2"
     },
     "pre-commit": [
-        "lint"
+        "lint",
+        "test"
     ]
 }

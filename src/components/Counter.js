@@ -7,7 +7,7 @@ import PropTypes from 'prop-types'
 function Counter({ counter, increment, decrement, incrementIfOdd, incrementAsync }) {
     return (
         <p>
-            Clicked : {counter} timers
+            Clicked: {counter} timers
             {''}
             <button onClick={increment}>+</button>
             {''}
