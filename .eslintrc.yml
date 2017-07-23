@@ -9,9 +9,10 @@ parser: babel-eslint
 rules:
   import/no-unresolved: 0
   react/jsx-filename-extension: [1, { "extensions": [".js"] }]
+  react/jsx-indent: ["error", 4]
   jsx-a11y/href-no-hash: off
-  indent: ["error", 4]
+  indent: ["error", 4, {"SwitchCase": 1}]
   semi: ["error", "never"]
   comma-dangle: 0
   no-alert: 0
-  object-curly-spacing: ["error", "never"]
+
