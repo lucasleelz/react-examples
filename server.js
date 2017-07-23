@@ -5,6 +5,8 @@
  *
  * Created by lucas lee on 2017/7/22.
  */
+/* eslint-disable */
+
 var webpack = require('webpack')
 var webpackDevMiddleware = require('webpack-dev-middleware')
 var webpackHotMiddleware = require('webpack-hot-middleware')
@@ -14,7 +16,7 @@ var config = require('./webpack.config')
 
 var app = new Express()
 var compiler = webpack(config)
-var port = 3000;
+var port = 3000
 
 app.use(webpackDevMiddleware(compiler, {
     noInfo: true,

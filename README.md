@@ -77,3 +77,30 @@ npm i express --save-dev
     Babel在ES2015、React预设的基础上新增react-hmre预设
     webpack 入口文件、输出配置以及插件使用。
     Express 则使用中间件。
+    
+## 加入eslint
+安装eslint
+```
+npm i -g eslint
+```
+为项目配置eslint
+```
+npm i eslint --save-dev
+eslint --init
+? How would you like to configure ESLint? Use a popular style guide
+? Which style guide do you want to follow? Google
+? What format do you want your config file to be in? YAML
+```
+然后就会自动安装配置依赖。
+
+```
+  4:1  error  Parsing error: The keyword 'import' is reserved
+```
+需要使用`import`插件
+```
+npm i eslint-plugin-import --save-dev
+```
+
+```
+npm i eslint eslint-loader babel-eslint eslint-plugin-react eslint-plugin-import eslint-config-google --save-dev
+```

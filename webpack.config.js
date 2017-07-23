@@ -39,6 +39,18 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin()
     ],
     module: {
-        loaders: [{test: /\.js$/, exclude: /node_modules/, include: __dirname, loaders: ['babel-loader']}]
-    }
+        loaders: [
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                include: __dirname,
+                loaders: ['babel-loader']
+            },
+            {
+                test: /\.js$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader'
+            }
+        ]
+    },
 }
